@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compliment Generator</h1>
+    </header>
+
+    <div class="content">
+        <p id="compliment">Welcome! What's your name?</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="generateCompliment()">Generate Compliment</button>
+    </div>
+
+    <footer>
+        &copy; 2024 Compliment Generator
+    </footer>
+
+    <script>
+        function generateCompliment() {
+            var name = document.getElementById('nameInput').value;
+            var compliment = "I like you, " + name + "!";
+            document.getElementById('compliment').innerText = compliment;
+        }
+    </script>
+</body>
+</html>
